@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101018">
+  <title>Moda | Diseñá tu vestido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="aplicacion">
+
+    <!-- Zona de chat -->
+    <section class="zona-chat" aria-label="Zona de chat">
+
+      <header class="encabezado">
+        <div class="logo">M</div>
+        <div class="identidad">
+          <h1>Moda</h1>
+          <p>Tu asistente de diseño</p>
+        </div>
+        <span class="estado" title="Interfaz lista"></span>
+      </header>
+
+      <div id="mensajes"
+           class="mensajes"
+           role="log"
+           aria-live="polite"
+           aria-relevant="additions">
+
+        <div class="mensaje agente">
+          <div class="burbuja">
+            ¡Hola! Soy Moda, tu asistente de diseño.
+            ✨ Contame cómo imaginás tu vestido
+            ideal: colores, estilo, ocasión o
+            cualquier detalle que te guste.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Zona de escritura -->
+    <section class="zona-escritura"
+             aria-label="Zona de escritura">
+
+      <form id="formulario" class="formulario">
+
+        <label for="entrada" class="etiqueta">
+          Diseñemos algo único
+        </label>
+
+        <div class="contenedor-entrada">
+          <textarea
+            id="entrada"
+            name="mensaje"
+            maxlength="500"
+            rows="3"
+            placeholder="Describí el vestido de tus sueños..."
+            aria-label="Escribí tu mensaje"
+            required
+          ></textarea>
+
+          <button
+            id="enviar"
+            type="submit"
+            aria-label="Enviar mensaje"
+          >
+            <svg viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 aria-hidden="true">
+              <path d="m5 12 14-7-7 14-2-7-5-2Z"/>
+              <path d="m10 12 9-7"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="pie-escritura">
+          <span id="estado-texto" role="status">
+            Tu creatividad empieza acá
+          </span>
+          <span id="contador">0 / 500</span>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
